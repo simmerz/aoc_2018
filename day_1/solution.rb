@@ -4,8 +4,8 @@ module Day1
   # Day 1
   class Solution
     def initialize
-      @data = File.read(File.join(File.dirname(__FILE__), 'input.txt'))
-                  .split("\n").map(&:to_i)
+      @data = File.open(File.join(File.dirname(__FILE__), 'input.txt'))
+                  .readlines.map(&:to_i)
       @frequency = 0
       @seen_frequencies = []
     end
